@@ -12,12 +12,12 @@ public class PersonEntity {
 	}
 
 	public PersonEntity(String name, String ssn, String address, String phone) {
-		super();
-		this.name = name;
-//		this.ssn = ssn;
+
 		setSsn(ssn);
-		this.address = address;
-		Phone = phone;
+		setName(name);
+		setAddress(address);
+		setPhone(phone);
+		
 	}
 
 	public String getName() {
