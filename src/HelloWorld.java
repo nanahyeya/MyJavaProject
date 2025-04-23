@@ -1,7 +1,7 @@
 /*
  * javac HelloWolrd.java
  * java HelloWolrd
- * Run 실행 단축키 = cntl + f11
+ * Run 실행 단축키 = ctrl + f11
  * 	     우클릭 -> Run Ass
  */
 public class HelloWorld {
