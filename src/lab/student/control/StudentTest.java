@@ -15,7 +15,7 @@ public class StudentTest extends Student {
 		
 		studentList.add(new Student("1", "±è¹Î¼ö", "ÄÄÇ»ÅÍ°øÇĞ", 3));
 		try {
-			studentList.get(0).setGrade(5);  // Changed from studentList[0] to studentList.get(0)
+			studentList.get(0).setGrade(5); 
 			
 		} catch(InsufficientGradeException e) {
 			System.out.println(e.getMessage());
