@@ -30,7 +30,9 @@ public class ManageBook {
 		System.out.println("===가격 변경 후===");
 		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
 
-
+		for (Publication publication : pubs) {
+			printSubInfo(publication);
+		}
 		
 		// Magazine 객체 생성
 //		Magazine mz = new Magazine();
@@ -42,6 +44,19 @@ public class ManageBook {
 //		Novel novel = new Novel();
 //		Publication pub2 = new Novel();
 
+	}
+	
+	public static void printSubInfo(Publication pub) {
+		if (pub instanceof Magazine) {
+			Magazine m = (Magazine)pub;
+			System.out.println(m.getPublishingPeriod());
+		} else if (pub instanceof Novel) {
+			Novel n = (Novel)pub;
+			System.out.println(n.getAuthor() + " " + n.getGenre());
+		} else if (pub instanceof ReferenceBook) {
+			ReferenceBook r = (ReferenceBook)pub;
+			System.out.println(r.getField());	
+		}
 	}
 	
 	// 다형적 아규먼트 (polymorphic argument)
