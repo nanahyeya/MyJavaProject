@@ -1,6 +1,7 @@
 package workshop.animal.entity;
 
 public class Fish extends Animal implements Pet {
+	private String name;
 
 	public Fish(int legs) {
 		super(0);
