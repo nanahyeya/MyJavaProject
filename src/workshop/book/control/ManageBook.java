@@ -21,18 +21,40 @@ public class ManageBook {
 		for (Publication publication : pubs) {
 			System.out.println(publication);
 		}
+		
+		System.out.println("===가격 변경 전===");
+		Publication pub2 = pubs[2];
+		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
+		modifyPrice(pub2);
+		
+		System.out.println("===가격 변경 후===");
+		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
+
 
 		
 		// Magazine 객체 생성
 //		Magazine mz = new Magazine();
 		// mz 변수로 호출 가능한 메서드는 5개 하지만 Publication타입인 pubs 배열에는 할당할 수 없음. 
-		Publication pub = new Publication();
+//		Publication pub = new Publication();
 		// pub 변수로 호출 가능한 메서드는 4개
 		
 		// Novel  객체 생성
 //		Novel novel = new Novel();
-		Publication pub2 = new Novel();
+//		Publication pub2 = new Novel();
 
+	}
+	
+	// 다형적 아규먼트 (polymorphic argument)
+	public static void modifyPrice(Publication pub) {
+		double rate = 0.0;
+		if (pub instanceof Magazine) {
+			rate = 0.6;	
+		} else if (pub instanceof Novel) {
+			rate = 0.8;	
+		}else if (pub instanceof ReferenceBook) {
+			rate = 0.9;	
+		}
+		pub.setPrice((int)(rate * pub.getPrice()));
 	}
 
 }
