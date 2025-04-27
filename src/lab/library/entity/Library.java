@@ -59,14 +59,19 @@ public class Library {
         return false;
     }
     
-    public void getAvailableBooks() {
-    	
-    	List<Book> availableBooks = new ArrayList<>();
+    public List<Book> getAvailableBooks() {
+        List<Book> availableBooks = new ArrayList<>();
         for (Book book : books) {
             if (book.isAvailable()) {
                 availableBooks.add(book);
             }
         }
+        return availableBooks;
+    }
+    
+    public void getAllBooks() {
+    	
+    	List<Book> availableBooks = getAvailableBooks();
         
     	int count = 0;
         for (Book book : books) {

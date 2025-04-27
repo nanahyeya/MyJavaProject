@@ -14,27 +14,28 @@ public class LibraryManagementSystem {
         
         System.out.println("===== 중앙 도서관 =====");
 
-        library.getAvailableBooks();
+        library.getAllBooks();
 
         testFindBook(library);
 
         testCheckOut(library);
 
-        testReturnBook(library);
+        testReturn(library);
 
-        library.getAvailableBooks();
+        library.getAllBooks();
         
-        printAvailableBooks(library);
+        displayAvailableBooks(library);
     }
 	
 	private static void addSampleBooks(Library library) {
-        library.addBook(new Book("자바 프로그래밍", "김자바", "978-89-01-12345-6", 2022));
-        library.addBook(new Book("객체지향의 사실과 오해", "조영호", "978-89-01-67890-1", 2015));
-        library.addBook(new Book("Clean Code", "Robert C. Martin", "978-0-13-235088-4", 2008));
-        library.addBook(new Book("Effective Java", "Joshua Bloch", "978-0-13-468599-1", 2018));
-        library.addBook(new Book("Head First Java", "Kathy Sierra", "978-0-596-00920-5", 2005));
-        library.addBook(new Book("자바의 정석", "남궁성", "978-89-01-14077-4", 2019));
-    }
+	    library.addBook(new Book("자바 프로그래밍", "김자바", "978-89-01-12345-6", 2022));
+	    library.addBook(new Book("객체지향의 사실과 오해", "조영호", "978-89-01-67890-1", 2015));
+	    library.addBook(new Book("Clean Code", "Robert C. Martin", "978-0-13-235088-4", 2008));
+	    library.addBook(new Book("Effective Java", "Joshua Bloch", "978-0-13-468599-1", 2018));
+	    library.addBook(new Book("Head First Java", "Kathy Sierra", "978-0-596-00920-5", 2005));
+	    library.addBook(new Book("자바의 정석", "남궁성", "978-89-01-14077-4", 2019));
+	}
+
 
 	
 	private static void testFindBook(Library library) {
@@ -71,7 +72,7 @@ public class LibraryManagementSystem {
         library.getAvailableBooks();
     }
     
-    private static void testReturnBook(Library library) {
+    private static void testReturn(Library library) {
         System.out.println("===== 도서 반납 테스트 =====");
         boolean result = library.returnBook("978-89-01-14077-4");
         if (result) {
@@ -88,7 +89,7 @@ public class LibraryManagementSystem {
         library.getAvailableBooks();
     }
     
-    private static void printAvailableBooks(Library library) {
+    private static void displayAvailableBooks(Library library) {
         System.out.println("===== 대출 가능한 도서 목록 =====");
         List<Book> books = library.getBooks();
 
