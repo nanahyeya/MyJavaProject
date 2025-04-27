@@ -1,9 +1,9 @@
 package workshop.book.control;
 
-import workdshop.book.entity.Magazine;
-import workdshop.book.entity.Novel;
-import workdshop.book.entity.Publication;
-import workdshop.book.entity.ReferenceBook;
+import workshop.book.entity.Magazine;
+import workshop.book.entity.Novel;
+import workshop.book.entity.Publication;
+import workshop.book.entity.ReferenceBook;
 
 
 public class ManageBook {

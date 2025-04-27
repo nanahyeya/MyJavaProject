@@ -1,4 +1,4 @@
-package workdshop.book.entity;
+package workshop.book.entity;
 
 public class ReferenceBook extends Publication {
 
